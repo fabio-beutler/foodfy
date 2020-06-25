@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 6.25%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 16rem;
+}
+
+
+header {
+    width: 90%;
+    max-width: 940rem;
+
+    margin: 30rem auto;
+
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    margin-right: 120rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #000;
+
+    margin-right: 30rem;
+
+    transition: 0.2s;
+}
+
+header nav a:hover {
+    font-weight: bold;
+}
+
+/* BANNER */
+.banner {
+    width: 90%;
+    max-width: 940rem;
+    height: 366rem;
+
+    margin: 0 auto;
+
+    background-color: rgba(251, 223, 219, 1);
+    border-radius: 30rem;
+
+    display: flex;
+    justify-content: space-aroound;
+}
+
+.banner img {
+    margin: 60rem 10% 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.banner__title {
+    padding: 10rem 60rem;
+    font-size: 28rem;
+}
+
+.banner__description {
+    padding: 10rem 60rem;
+    font-size: 18rem;
+}
+
+.favorites {
+    width: 90%;
+    max-width: 940rem;
+
+    margin: 50rem auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites h2 {
+    font-size: 24rem;
+}
+
+.cards {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20rem;
+}
+
+.card__image img {
+    width: 100%;
+    border-radius: 15rem;
+
+    margin: 20rem 0;
+}
+
+.card__title {
+    font-size: 18rem;
+    color: rgba(17, 17, 17, 1);
+}
+
+.card__author {
+    color: rgba(119, 119, 119, 1);
+    margin-top: 5rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(238, 238, 238, 1);
+    height: 62rem;
+
+    padding: 25rem;
+
+    text-align: center;
+    font-size: 14rem;
+    color: rgba(153, 153, 153, 1);
+}
