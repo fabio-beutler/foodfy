@@ -9,9 +9,10 @@
     <title>Foodfy</title>
     {% endblock title %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 
     {% block styles %}
     {% endblock styles %}
@@ -19,23 +20,34 @@
 
 <body>
 
-    <header class="header">
-        <a href="/home" class="logo">Foodfy</a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-        <ul class="menu">
-            <li><a href="/about">About</a></li>
-            <li><a href="/recipes">Recipes</a></li>
+    <nav>
+        <div class="logo">
+            <h4>Foodfy</h4>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/recipes">Receitas</a></li>
+            <li><a href="/admin/recipes">Admin</a></li>
+            <li><a href="/about">Sobre</a></li>
         </ul>
-    </header>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 
     {% block content %}
     {% endblock content %}
 
-    <footer>
+    {# <footer>
         Todos os direitos reservados. receitas Foodfy.
-    </footer>
-
+    </footer> #}
+    
+    <script src="/js/nav.js"></script>
+    
     {% block scripts %}
     {% endblock scripts %}
 
