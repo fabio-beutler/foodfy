@@ -9,20 +9,30 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+
 /*=== NAVBAR ===*/
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 10vh;
   font-family: "Poppins", sans-serif;
   background: #f36f36;
+  user-select: none;
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 .logo h4 {
   color: white;
   font-family: "Pacifico", cursive;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: normal;
 }
 
@@ -41,17 +51,113 @@ nav {
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .burger {
   display: none;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  border-radius: 2px;
-  background-color: white;
-  margin: 5px;
+.overlay.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*=== HOME PAGE ===*/
+
+.home__banner {
+  height: 45vh;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  background: #ffd2c8;
+  margin: 28px auto 16px;
+  position: relative;
+}
+
+.home__banner___title {
+  font-family: Poppins;
+  text-align: center;
+  padding-top: 40px;
+  line-height: 33px;
+  font-size: 24px;
+}
+
+.home__banner___description {
+  font-family: Poppins;
+  text-align: center;
+  padding-top: 16px;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+.home__banner___image {
+  position: absolute;
+  bottom: 3%;
+  right: 15%;
+}
+
+.home__lastAdd {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home__lastAdd h2 {
+  font-family: Pacifico;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #4d4d4d;
+}
+
+.home__cards {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.home__card {
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+  background-color: #faeeee;
+  border-radius: 18px;
+  height: 30vh;
+}
+
+.home__card___image {
+  height: 60%;
+}
+
+.home__card___image img {
+  display: block;
+  width: 93%;
+  height: 100%;
+  border-radius: 16px;
+  margin: 3% auto 0;
+  object-fit: cover;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home__card___title {
+  font-family: Roboto;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.home__card___author {
+  font-family: Roboto;
+  color: #8f8f8f;
+  text-align: center;
+  padding-top: 2px;
 }

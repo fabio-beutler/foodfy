@@ -1,10 +1,58 @@
 @media (max-width: 1024px) {
+  /*=== NAVBAR ===*/
   .nav-links {
     width: 60%;
   }
 }
 
+@media (max-width: 920px) {
+  /*=== HOME PAGE ===*/
+  .home__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  /*=== HOME PAGE ===*/
+  .home__banner {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 680px) {
+  /*=== HOME PAGE ===*/
+  .home__banner___title {
+    font-size: 20px;
+  }
+
+  .home__banner___description {
+    font-size: 18px;
+  }
+  .home__card {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 580px) {
+  /*=== NAVBAR ===*/
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /*=== HOME PAGE ===*/
+  .home__banner {
+    height: 48vh;
+  }
+}
+@media (max-width: 485px) {
+  /*=== HOME PAGE ===*/
+  .home__banner {
+    height: 56vh;
+  }
+}
+
+@media (max-width: 414px) {
+  /*=== NAVBAR ===*/
   body {
     overflow-x: hidden;
   }
@@ -12,8 +60,8 @@
   .nav-links {
     position: absolute;
     right: 0;
-    height: 92vh;
-    top: 8vh;
+    height: 90vh;
+    top: 10vh;
     background-color: #f36f36;
     display: flex;
     flex-direction: column;
@@ -21,6 +69,8 @@
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    padding-bottom: 10vh;
+    z-index: 1;
   }
 
   .nav-links li {
@@ -33,6 +83,11 @@
   }
 
   .burger div {
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: white;
+    margin: 5px;
     transition: all 0.3s ease;
   }
 
@@ -50,6 +105,47 @@
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .overlay {
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 90vh;
+    top: 10vh;
+    width: 100%;
+    background-color: rgba(39, 39, 39, 0.404);
+    z-index: 0;
+    transition: 1s;
+    opacity: 1;
+    visibility: initial;
+  }
+
+  /*=== HOME PAGE ===*/
+  .home__banner {
+    height: 45vh;
+  }
+
+  .home__banner___title {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  .home__banner___image {
+    right: 7%;
+  }
+
+  .home__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  /*=== HOME PAGE ===*/
+  .home__banner {
+    height: 55vh;
   }
 }
 

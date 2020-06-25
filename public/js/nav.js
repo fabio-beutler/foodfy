@@ -1,10 +1,11 @@
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav-links");
+const navLinks = document.querySelectorAll(".nav-links li");
+const overlay = document.querySelector(".overlay");
 
+function toggleNav(listener) {
   // Toggle Nav
-  burger.addEventListener("click", () => {
+  listener.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
 
     // Animate Links
@@ -18,7 +19,11 @@ const navSlide = () => {
 
     // Burger Animation
     burger.classList.toggle("toggle");
-  });
-};
 
-navSlide();
+    // Overlay Option
+    overlay.classList.toggle("hide");
+  });
+}
+
+toggleNav(burger);
+toggleNav(overlay);
