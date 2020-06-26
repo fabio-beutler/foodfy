@@ -5,12 +5,72 @@
 {% endblock title %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/css/edit.css">
+  <link rel="stylesheet" href="/css/form.css">
 {% endblock styles %}
 
 {% block content %}
 
+  <form class="form" method="POST" action="/admin/recipe?_method=PUT">
+    <section class="form__avatar" style="background: url(https://source.unsplash.com/collection/3450082/500x500) no-repeat center center / cover"></section>
+    <section class="form__details">
+      <h3>Editar Receita</h3>
+      
+      <div class="form__item">
+        <div>Imagem da Receita</div>
+        <div>
+          <input type="url" name="image" placeholder="https://" value="{{ recipe.image }}">
+        </div>
+      </div>
 
+      <div class="form__item">
+        <div>Título da receita</div>
+        <div>
+          <input type="text" name="title" placeholder="Título da Receita" value="{{ recipe.title }}">
+        </div>
+      </div>
+
+      <div class="form__item">
+        <div>Autor</div>
+        <div>
+          <input type="text" name="author" value="{{ recipe.author }}">
+        </div>
+      </div>
+
+      <div class="form__item">
+        <div>Ingredientes</div>
+        
+        {% for ingredient in recipe.ingredients %}
+          <div>
+            <input type="text" name="ingredients" value="{{ ingredient }}">
+          </div>
+        {% endfor %}
+
+        <button>Adicionar Ingrediente</button>
+      </div>
+
+      <div class="form__item">
+        <div>Modo de Preparo</div>
+        
+        {% for step in recipe.preparation %}
+          <div>
+            <input type="text" name="preparation" value="{{ step }}">
+          </div>
+        {% endfor %}
+
+        <button>Adicionar Etapa</button>
+      </div>
+
+      <div class="form__item">
+        <div>Informações Adicionais</div>
+        <div>
+          <input type="text" name="title" value="{{ recipe.information }}">
+        </div>
+      </div>
+
+      <button type="submit">Salvar</button>
+      
+    </section>
+  </form>
 
 {% endblock content %}
 

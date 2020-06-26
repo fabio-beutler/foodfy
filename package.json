@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "license": "MIT",
+  "author": "Fabio Beutler",
+  "description": "Website with beautiful dishes",
+  "homepage": "https://github.com/fabio-beutler/foodfy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabio-beutler/foodfy"
+  },
+  "engines": {
+    "npm": ">=6.14.5",
+    "node": ">=12.18.1"
+  },
   "scripts": {
     "dev": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/server.js",

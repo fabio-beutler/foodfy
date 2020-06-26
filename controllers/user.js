@@ -1,3 +1,4 @@
+const fs = require("fs");
 const data = require("../src/data.json");
 
 // HOME PAGE

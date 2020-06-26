@@ -5,11 +5,74 @@
 {% endblock title %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/css/create.css">
+  <link rel="stylesheet" href="/css/form.css">
 {% endblock styles %}
 
 {% block content %}
 
+  <form class="form" method="POST" action="/admin/recipe">
+    <section class="form__details">
+      <h3>Nova Receita</h3>
+      
+      <div class="form__items">
+      
+        <div class="form__item">
+          <div>Imagem da Receita</div>
+          <div>
+            <input type="url" name="image" placeholder="https://" value="{{ recipe.image }}">
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div>Título da receita</div>
+          <div>
+            <input type="text" name="title" placeholder="Título da Receita" value="{{ recipe.title }}">
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div>Autor</div>
+          <div>
+            <input type="text" name="author" value="{{ recipe.author }}">
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div>Ingredientes</div>
+          
+          <ul>
+            <li>
+              <input type="text" name="ingredients" value="{{ recipe.ingredients }}">
+            </li>
+          </ul>
+
+          <button>Adicionar Ingrediente</button>
+        </div>
+
+        <div class="form__item">
+          <div>Modo de Preparo</div>
+          
+          <ul>
+            <li>
+              <input type="text" name="preparation" value="{{ recipe.preparation }}">
+            </li>
+          </ul>
+
+          <button>Adicionar Etapa</button>
+        </div>
+
+        <div class="form__item">
+          <div>Informações Adicionais</div>
+          <div>
+            <input type="text" name="title" value="{{ recipe.information }}">
+          </div>
+        </div>
+
+      </div>
+      <button type="submit">Salvar</button>
+      
+    </section>
+  </form>
 
 
 {% endblock content %}

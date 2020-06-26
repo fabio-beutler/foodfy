@@ -1,0 +1,27 @@
+/*=== FORM FOR CREATE AND EDIT PAGES ===*/
+.form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__details h3 {
+  font-family: Pacifico;
+  font-size: 32px;
+  margin: 32px 0 16px;
+  font-weight: normal;
+}
+
+.form__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+  font-family: Poppins;
+}

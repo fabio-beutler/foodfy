@@ -1,3 +1,4 @@
+const fs = require("fs");
 const data = require("../src/data.json");
 
 // SHOW ALL RECIPES OF ADMIN (INDEX)
@@ -72,7 +73,7 @@ exports.post = (req, res) => {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("Write file error");
 
-    return res.redirect(`admin/recipe/${id}`);
+    return res.redirect(`/admin/recipe/${id}`);
   });
 
   // return res.send(req.body);
