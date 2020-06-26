@@ -1,4 +1,4 @@
-const data = require("../data.json");
+const data = require("../src/data.json");
 
 // HOME PAGE
 exports.home = (req, res) => {

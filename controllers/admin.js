@@ -1,4 +1,4 @@
-const data = require("../data.json");
+const data = require("../src/data.json");
 
 // SHOW ALL RECIPES OF ADMIN (INDEX)
 exports.index = (req, res) => {
