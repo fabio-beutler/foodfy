@@ -15,9 +15,9 @@
 
 @media (max-width: 768px) {
   /*=== HOME PAGE ===*/
-  .home__banner {
+  /* .home__banner {
     height: 30vh;
-  }
+  } */
 }
 
 @media (max-width: 680px) {

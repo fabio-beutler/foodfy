@@ -12,6 +12,29 @@
 
 .recipe__title {
   margin-top: 32px;
+  position: relative;
+}
+
+.recipe__title a.recipe__editButton {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  outline: none;
+  background-color: var(--primary-color);
+  width: 150px;
+  line-height: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  font-size: 22px;
+  font-family: Pacifico;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.recipe__title a.recipe__editButton:hover {
+  background-color: #e24c0b;
 }
 
 .recipe__title h1 {

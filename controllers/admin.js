@@ -2,12 +2,12 @@ const data = require("../data.json");
 
 // SHOW ALL RECIPES OF ADMIN (INDEX)
 exports.index = (req, res) => {
-  return res.render("/admin/index", { recipes: data.recipes });
+  return res.render("admin/index", { recipes: data.recipes });
 };
 
 // CREATE PAGE
 exports.create = (req, res) => {
-  return res.render("/admin/create");
+  return res.render("admin/create");
 };
 
 // SHOW ONE RECIPE BY ID
@@ -22,7 +22,7 @@ exports.show = (req, res) => {
 
   const recipe = { ...foundRecipe };
 
-  return res.render("recipes/show", { recipe });
+  return res.render("admin/show", { recipe });
 };
 
 // EDIT ONE RECIPE BY ID
@@ -37,7 +37,7 @@ exports.edit = (req, res) => {
 
   const recipe = { ...foundRecipe };
 
-  return res.render("recipes/edit", { recipe });
+  return res.render("admin/edit", { recipe });
 };
 
 // POST
@@ -72,7 +72,7 @@ exports.post = (req, res) => {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("Write file error");
 
-    return res.redirect(`/recipe/${id}`);
+    return res.redirect(`admin/recipe/${id}`);
   });
 
   // return res.send(req.body);
@@ -103,7 +103,7 @@ exports.put = (req, res) => {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send("Write error");
 
-    return res.redirect(`/recipe/${id}`);
+    return res.redirect(`admin/recipe/${id}`);
   });
 };
 
@@ -119,6 +119,6 @@ exports.delete = (req, res) => {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send("Write file error");
 
-    return res.redirect("/recipes");
+    return res.redirect("admin/recipes");
   });
 };
