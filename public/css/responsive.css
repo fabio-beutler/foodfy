@@ -56,7 +56,7 @@
 @media (max-width: 414px) {
   /*=== NAVBAR ===*/
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 
   .nav-links {
