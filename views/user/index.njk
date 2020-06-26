@@ -1,39 +1,45 @@
 {% extends "layout.njk" %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/css/recipes.css">
+    <link rel="stylesheet" href="/css/index.css">
 {% endblock styles %}
 
 {% block content %}
-    <section class="favorites">
-        <div class="cards">
+    <section class="index__allRecipes">
+        <H2>Todas as Receitas</H2>
+
+        <div class="index__cards">
 
             {% for recipe in recipes %}
-                <div class="card">
-                    <div class="card__image">
-                        <img src="{{ recipe.image }}" alt="burguer">
+                <a href="/recipe/{{ recipe.id }}">
+                    <div class="index__card">
+                        <div class="index__card___image">
+                            <img src="{{ recipe.image }}" alt="burguer">
+                        </div>
+                        <div class="index__card___title">
+                            <h3>{{ recipe.title }}</h3>
+                        </div>
+                        <div class="index__card___author">
+                            <p>{{ recipe.author }}</p>
+                        </div>
                     </div>
-                    <div class="card__title">
-                        <h3>{{ recipe.title }}</h3>
-                    </div>
-                    <div class="card__author">
-                        <p>{{ recipe.author }}</p>
-                    </div>
-                </div>
+                </a>
             {% endfor %}
 
             {% for recipe in recipes %}
-                <div class="card">
-                    <div class="card__image">
-                        <img src="{{ recipe.image }}" alt="burguer">
+                <a href="/recipe/{{ recipe.id }}">
+                    <div class="index__card">
+                        <div class="index__card___image">
+                            <img src="{{ recipe.image }}" alt="burguer">
+                        </div>
+                        <div class="index__card___title">
+                            <h3>{{ recipe.title }}</h3>
+                        </div>
+                        <div class="index__card___author">
+                            <p>{{ recipe.author }}</p>
+                        </div>
                     </div>
-                    <div class="card__title">
-                        <h3>{{ recipe.title }}</h3>
-                    </div>
-                    <div class="card__author">
-                        <p>{{ recipe.author }}</p>
-                    </div>
-                </div>
+                </a>
             {% endfor %}
 
             

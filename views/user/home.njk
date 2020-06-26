@@ -20,17 +20,19 @@
         <h2>Ultimas Adicionadas</h2>
         <div class="home__cards">
             {% for recipe in recipes %}
-                <div class="home__card">
-                    <div class="home__card___image">
-                        <img src="{{ recipe.image }}" alt="burguer">
+                <a href="/recipe/{{ recipe.id }}">
+                    <div class="home__card">
+                        <div class="home__card___image">
+                            <img src="{{ recipe.image }}" alt="burguer">
+                        </div>
+                        <div class="home__card___title">
+                            <h3>{{ recipe.title }}</h3>
+                        </div>
+                        <div class="home__card___author">
+                            <p>{{ recipe.author }}</p>
+                        </div>
                     </div>
-                    <div class="home__card___title">
-                        <h3>{{ recipe.title }}</h3>
-                    </div>
-                    <div class="home__card___author">
-                        <p>{{ recipe.author }}</p>
-                    </div>
-                </div>
+                </a>
             {% endfor %}
         </div>
     </div>

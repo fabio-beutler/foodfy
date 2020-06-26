@@ -4,31 +4,53 @@
   <title>{{ recipe.title }}</title>
 {% endblock title %}
 
+{% block styles %}
+  <link rel="stylesheet" href="/css/show.css">
+{% endblock styles %}
+
 {% block content %}
-  <div class="recipe__title">
-    <img src="{{ recipe.image }}" alt="Imagem de {{ recipe.title }}">
-    <h1>{{ recipe.title }}</h1>
-    <p>{{ recipe.author }}</p>
+
+  <div class="recipes">
+
+    <div class="recipe__title">
+      <h1>{{ recipe.title }}</h1>
+      <p>por {{ recipe.author }}</p>
+      <img src="{{ recipe.image }}" alt="Imagem de {{ recipe.title }}">
+    </div>
+
+    <div class="recipe__content">
+
+      <div class="recipe__content___ingredients">
+        <h4>Ingredientes <span id="ingredients__button">ESCONDER</span></h4>
+        <ul id="ingredients__list">
+          {% for ingredient in recipe.ingredients %}
+            <li>{{ ingredient }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="recipe__content___preparation">
+        <h4>Modo de Preparo <span id="preparation__button">ESCONDER</span></h4>
+        <ul id="preparation__list">
+          {% for step in recipe.preparation %}
+            <li>{{ step }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="recipe__content___information">
+        <h4>Informações Adicionais <span id="information__button">ESCONDER</span></h4>
+        <ul id="information__list">
+          <li>{{ recipe.information }}</li>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="recipe__content">
-    <h4>Ingredientes <span>ESCONDER</span></h4>
-    <ul>
-      {% for ingredient in recipe.ingredients %}
-        <li>{{ ingredient }}</li>
-      {% endfor %}
-    </ul>
-
-    <h4>Modo de Preparo <span>ESCONDER</span></h4>
-    <ul>
-      {% for step in recipe.preparation %}
-        <li>{{ step }}</li>
-      {% endfor %}
-    </ul>
-
-    <h4>Informações Adicionais <span>ESCONDER</span></h4>
-    <ul>
-      <li>{{ recipe.information }}</li>
-    </ul>
-  </div>
 {% endblock content %}
+
+{% block scripts %}
+<script src="/js/hideButton.js"></script>
+{% endblock scripts %}

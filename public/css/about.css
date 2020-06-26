@@ -7,9 +7,11 @@ header nav a:first-child {
   max-width: 940px;
 
   margin: 0 auto;
+
+  font-family: Poppins;
 }
 
-.about__content h1 {
+.about__content h2 {
   margin-top: 25px;
 
   color: rgba(17, 17, 17, 1);

@@ -7,7 +7,8 @@
 
 @media (max-width: 920px) {
   /*=== HOME PAGE ===*/
-  .home__cards {
+  .home__cards,
+  .index__cards {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -28,7 +29,8 @@
   .home__banner___description {
     font-size: 18px;
   }
-  .home__card {
+  .home__card,
+  index__card {
     height: 35vh;
   }
 }
@@ -137,8 +139,14 @@
     right: 7%;
   }
 
-  .home__cards {
+  .home__cards,
+  .index__cards {
     grid-template-columns: 1fr;
+  }
+
+  /*=== USER RECIPES PAGE ===*/
+  .recipe__content {
+    width: 98%;
   }
 }
 

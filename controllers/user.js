@@ -27,5 +27,5 @@ exports.show = (req, res) => {
 
   const recipe = { ...foundRecipe };
 
-  return res.render("recipes/show", { recipe });
+  return res.render("user/show", { recipe });
 };
