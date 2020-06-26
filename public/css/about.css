@@ -1,0 +1,32 @@
+header nav a:first-child {
+  font-weight: bold;
+}
+
+.about {
+  width: 90%;
+  max-width: 940px;
+
+  margin: 0 auto;
+}
+
+.about__content h1 {
+  margin-top: 25px;
+
+  color: rgba(17, 17, 17, 1);
+  font-size: 24px;
+}
+
+.about__content h4 {
+  margin-top: 25px;
+
+  color: rgba(17, 17, 17, 1);
+  font-size: 20px;
+}
+
+.about__content p {
+  margin: 20px 0;
+
+  color: rgba(68, 68, 68, 1);
+  font-size: 18px;
+  line-height: 28px;
+}
