@@ -2,12 +2,20 @@
 .form {
   width: 80%;
   margin: 0 auto;
+
+  margin: 32px auto;
 }
 
 .form__details {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 70%;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  box-shadow: 0 0 6px #0000004f;
 }
 
 .form__details h3 {
@@ -15,6 +23,7 @@
   font-size: 32px;
   margin: 32px 0 16px;
   font-weight: normal;
+  color: white;
 }
 
 .form__items {
@@ -24,4 +33,56 @@
   margin-bottom: 10px;
 
   font-family: Poppins;
+  width: 80%;
+}
+
+.form__item {
+  width: 90%;
+}
+
+.form__item h4 {
+  margin: 16px 0 8px 8px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: Poppins;
+}
+
+.form__item input {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.form__item ul li {
+  list-style: none;
+}
+
+.form__item button {
+  background: none;
+  color: white;
+  font-family: Poppins;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.form button[type="submit"] {
+  margin: 16px 0 32px;
+  font-family: Pacifico;
+  color: white;
+  background: #c05426;
+  width: 50%;
+  font-size: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px #00000099;
+  transition: 0.3s;
+}
+
+.form button[type="submit"]:hover {
+  background: #2a461a;
 }

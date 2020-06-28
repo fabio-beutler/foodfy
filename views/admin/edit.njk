@@ -16,28 +16,28 @@
       <h3>Editar Receita</h3>
       
       <div class="form__item">
-        <div>Imagem da Receita</div>
+        <h4>Imagem da Receita</h4>
         <div>
           <input type="url" name="image" placeholder="https://" value="{{ recipe.image }}">
         </div>
       </div>
 
       <div class="form__item">
-        <div>Título da receita</div>
+        <h4>Título da receita</h4>
         <div>
           <input type="text" name="title" placeholder="Título da Receita" value="{{ recipe.title }}">
         </div>
       </div>
 
       <div class="form__item">
-        <div>Autor</div>
+        <h4>Autor</h4>
         <div>
           <input type="text" name="author" value="{{ recipe.author }}">
         </div>
       </div>
 
       <div class="form__item">
-        <div>Ingredientes</div>
+        <h4>Ingredientes</h4>
         
         {% for ingredient in recipe.ingredients %}
           <div>
@@ -45,11 +45,11 @@
           </div>
         {% endfor %}
 
-        <button>Adicionar Ingrediente</button>
+        <button id="ingredientButton">+ Adicionar Ingrediente</button>
       </div>
 
       <div class="form__item">
-        <div>Modo de Preparo</div>
+        <h4>Modo de Preparo</h4>
         
         {% for step in recipe.preparation %}
           <div>
@@ -57,11 +57,11 @@
           </div>
         {% endfor %}
 
-        <button>Adicionar Etapa</button>
+        <button id="stepButton">+ Adicionar Etapa</button>
       </div>
 
       <div class="form__item">
-        <div>Informações Adicionais</div>
+        <h4>Informações Adicionais</h4>
         <div>
           <input type="text" name="title" value="{{ recipe.information }}">
         </div>
