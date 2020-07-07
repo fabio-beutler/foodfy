@@ -1,5 +1,5 @@
 const fs = require("fs");
-const data = require("../src/data.json");
+const data = require("../data.json");
 
 // SHOW ALL RECIPES OF ADMIN (INDEX)
 exports.index = (req, res) => {
@@ -54,6 +54,8 @@ exports.post = (req, res) => {
 
   let { image, title, author, ingredients, preparation, information } = req.body;
 
+  console.log(ingredients);
+
   let id = 1;
   const lastRecipe = data.recipes[data.recipes.length - 1];
   if (lastRecipe) {
@@ -70,7 +72,7 @@ exports.post = (req, res) => {
     information,
   });
 
-  fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+  fs.writeFile("src/data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("Write file error");
 
     return res.redirect(`/admin/recipe/${id}`);
@@ -101,10 +103,10 @@ exports.put = (req, res) => {
 
   data.recipes[index] = recipe;
 
-  fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+  fs.writeFile("src/data.json", JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send("Write error");
 
-    return res.redirect(`admin/recipe/${id}`);
+    return res.redirect(`/admin/recipe/${id}`);
   });
 };
 

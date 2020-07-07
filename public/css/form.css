@@ -86,3 +86,20 @@
 .form button[type="submit"]:hover {
   background: #2a461a;
 }
+
+/* #form__delete button[type="submit"] {
+  margin: 16px 0 32px;
+  font-family: Pacifico;
+  color: white;
+  background: #c05426;
+  width: 50%;
+  font-size: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px #00000099;
+  transition: 0.3s;
+}
+
+#form__delete button[type="submit"]:hover {
+  background: #64140e;
+} */

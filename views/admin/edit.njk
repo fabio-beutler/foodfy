@@ -25,7 +25,7 @@
       <div class="form__item">
         <h4>Título da receita</h4>
         <div>
-          <input type="text" name="title" placeholder="Título da Receita" value="{{ recipe.title }}">
+          <input type="text" name="title" value="{{ recipe.title }}">
         </div>
       </div>
 
@@ -63,11 +63,16 @@
       <div class="form__item">
         <h4>Informações Adicionais</h4>
         <div>
-          <input type="text" name="title" value="{{ recipe.information }}">
+          <input type="text" name="information" value="{{ recipe.information }}">
         </div>
       </div>
 
       <button type="submit">Salvar</button>
+
+      {# <form id="form__delete" method="POST" action="/instructors?_method=DELETE">
+        <input type="hidden" name="id" value="{{ recipe.id }}">
+        <button type="submit">Deletar</button>
+      </form> #}
       
     </section>
   </form>

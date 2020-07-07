@@ -138,6 +138,28 @@
         "açúcar de confeiteiro e corte em quadrados."
       ],
       "information": ""
+    },
+    {
+      "id": 7,
+      "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=740&q=80",
+      "title": "Camarão",
+      "author": "Renata",
+      "ingredients": [
+        "Camarao graúdo"
+      ],
+      "preparation": [
+        "Fazer o camarão"
+      ],
+      "information": "é muito bom"
+    },
+    {
+      "id": 8,
+      "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=740&q=80",
+      "title": "Camarão",
+      "author": "Renata",
+      "ingredients": "Camarao graúdo",
+      "preparation": "Fazer o camarão",
+      "information": "é muito bom"
     }
   ]
 }
